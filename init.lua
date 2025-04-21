@@ -170,6 +170,12 @@ vim.opt.rtp:prepend(lazypath)
 --    }
 --
 require('lazy').setup({
+  { -- Python `uv` integration with Neovim
+    'benomahony/uv.nvim',
+    config = function()
+      require('uv').setup()
+    end,
+  },
   { -- Live reload local development server inside neovim
     'barrett-ruth/live-server.nvim',
     build = 'npm install -g live-server',
