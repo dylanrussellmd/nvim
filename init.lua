@@ -170,6 +170,12 @@ vim.opt.rtp:prepend(lazypath)
 --    }
 --
 require('lazy').setup({
+  { -- Live reload local development server inside neovim
+    'barrett-ruth/live-server.nvim',
+    build = 'npm install -g live-server',
+    cmd = { 'LiveServerStart', 'LiveServerStop' },
+    config = true,
+  },
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
