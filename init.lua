@@ -251,7 +251,7 @@ require('lazy').setup({
           { '<leader>s', group = '[S]earch' },
           { '<leader>t', group = '[T]oggle' },
           { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-          { '<leader>x', group = 'Python uv', icon = { icon = py_icon, color = 'yellow' } },
+          { '<leader>x', group = 'Python `uv`', icon = { icon = py_icon, color = 'yellow' } },
         },
       }
 
