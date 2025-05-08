@@ -2,9 +2,11 @@ return {
   -- Python `uv` integration with Neovim
   'benomahony/uv.nvim',
   dependencies = 'nvim-telescope/telescope.nvim',
+  ftplugin = 'python', -- `uv` is associated with Python files
   config = function()
     require('uv').setup()
     local map = vim.keymap.set
+
     local uv_ok, uv = pcall(require, 'uv')
     local ts_ok, ts = pcall(require, 'telescope.builtin')
     local actions_ok, actions = pcall(require, 'telescope.actions')
@@ -12,7 +14,7 @@ return {
 
     local function run_uv_pytest(cmd_suffix)
       if not uv_ok then
-        print 'Error: uv.nvim plugin not foudn or failed to load.'
+        print 'Error: uv.nvim plugin not found or failed to load.'
         return
       end
       local command = 'uv run pytest'
