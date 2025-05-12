@@ -1,5 +1,9 @@
 # `nvim` Configuration
 
+## TODO
+- Figure out how to get `pyright` auto-imports working with and without virtual environments.
+- Resolve overlapping functionality in `ruff` and `pyright`.
+
 ### Install External Dependencies
 
 External Requirements:
@@ -33,7 +37,7 @@ fork to your machine using one of the commands below, depending on your OS.
 > Your fork's URL will be something like this:
 > `https://github.com/<your_github_username>/kickstart.nvim.git`
 
-You likely want to remove `lazy-lock.json` from your fork's `.gitignore` file
+You likely want to remove `lazy-lock.json` from your fork's `.gitignore` files.
 too - it's ignored in the kickstart repo to make maintenance easier, but it's
 [recommended to track it in version control](https://lazy.folke.io/usage/lockfile).
 
